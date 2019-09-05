@@ -3,6 +3,7 @@
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
+book_spider_server/__pycache__/
 *.py[cod]
 *$py.class
 
