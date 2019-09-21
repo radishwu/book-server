@@ -5,5 +5,3 @@ __pycache__/
 book/__pycache__/
 
 instance/
-
-book/schema.sql
