@@ -113,22 +113,8 @@ def insert_to_db(data):
 
 def query_from_db(isbn):
     db = get_db()
-    queryOne = db.execute(
+    book = db.execute(
         'select name,cover,original_name,author,press,translator,publication_time,pricing,isbn,intro,score from book where isbn=?',
         (isbn, )).fetchone()
-    if queryOne is None:
-        return None
-
-    book = {}
-    book['name'] = queryOne['name']
-    book['cover'] = queryOne['cover']
-    book['original_name'] = queryOne['original_name']
-    book['author'] = queryOne['author']
-    book['press'] = queryOne['press']
-    book['translator'] = queryOne['translator']
-    book['publication_time'] = queryOne['publication_time']
-    book['pricing'] = queryOne['pricing']
-    book['isbn'] = queryOne['isbn']
-    book['intro'] = queryOne['intro']
-    book['score'] = queryOne['score']
+        
     return book
